@@ -3,13 +3,27 @@
 
 #include <stdio.h>
 
+void calcPa(int pa, int razao, int qtd) {
+    for (int i = 1; i<= qtd; i++){ // var i começa em um, no meio há a condição, i++
+        pa += razao;
+        printf("a progressao eh: %d\n", pa);
+    }
+}
+
+void calcPg(int pg, int razao, int qtd) {
+    for (int i = 1; i<= qtd; i++){ // tratamento da repetição, i++ significa q ele vai executar
+        pg *= razao;
+        printf("a progressao eh: %d\n", pg);
+    }
+}
+
 int main(){
-    int pa;
+    int termo;
     int razao;
     int qtd;
 
     printf("digite o primeiro termo: ");
-    scanf("%d", &pa);
+    scanf("%d", &termo);
 
     printf("digite a razao: ");
     scanf("%d", &razao);
@@ -17,13 +31,13 @@ int main(){
     printf("digite a quantidade: ");
     scanf("%d", &qtd);
 
-    if (qtd <= 0){
-        printf("zero ou negativo nao pode");
+    if(qtd <= 0){
+        printf("n pode negativo e zero nao fi kkkkk");
     } else {
-        for (int i = 1; i<= qtd; i++){
-            pa += razao;
-            printf("a progressao eh: %d\n", pa);
-        }
+        calcPa(termo, razao, qtd);
+        printf("----------------\n");
+        calcPg(termo, razao, qtd);
     }
+
     return 0;
 }
