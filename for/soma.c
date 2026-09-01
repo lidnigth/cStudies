@@ -11,6 +11,6 @@ int main(){
     for (int i = 1; i <= n; i++){
         soma = soma + i;
     }
-    printf("a soma de 1 + %d eh igual a: %d\n ", n, soma);
+    printf("a soma de todos os numeros de 1 ate %d eh: %d\n", n, soma);
     return 0;
 }
